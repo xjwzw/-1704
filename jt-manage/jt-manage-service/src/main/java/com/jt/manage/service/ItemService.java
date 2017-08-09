@@ -10,6 +10,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.jt.common.service.BaseService;
+import com.jt.common.service.RedisService;
+import com.jt.common.spring.exetend.PropertyConfig;
 import com.jt.common.vo.EasyUIResult;
 import com.jt.manage.mapper.ItemDescMapper;
 import com.jt.manage.mapper.ItemMapper;
@@ -22,6 +24,10 @@ public class ItemService extends BaseService<Item>{
 	private ItemMapper itemMapper;
 	@Autowired
 	private ItemDescMapper itemDescMapper;
+	@Autowired
+	private RedisService redisService;
+	@PropertyConfig
+	private String ITEM_KEY_PEFIX;
 	/**
 	 * {"title":2000,"rows":[{},{},{}]}
 		title 是记录总数
@@ -101,6 +107,7 @@ public class ItemService extends BaseService<Item>{
 		itemDesc.setItemDesc(desc);
 		itemDesc.setUpdated(item.getUpdated());
 		itemDescMapper.updateByPrimaryKeySelective(itemDesc);
+		redisService.del(ITEM_KEY_PEFIX+item.getId());//删除缓存
 	}
 	/**
 	 * 删除商品

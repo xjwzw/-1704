@@ -4,6 +4,7 @@ D:\MyWorkspace\jt-common\src\main\java\com\jt\common\vo\EasyUIResult.java
 D:\MyWorkspace\jt-common\src\main\java\com\jt\common\spring\exetend\ConfigAnnotationBeanPostProcessor.java
 D:\MyWorkspace\jt-common\src\main\java\com\jt\common\service\BaseService.java
 D:\MyWorkspace\jt-common\src\main\java\com\jt\common\mapper\SysMapper.java
+D:\MyWorkspace\jt-common\src\main\java\com\jt\common\util\RedisCluster.java
 D:\MyWorkspace\jt-common\src\main\java\com\jt\common\service\HttpClientService.java
 D:\MyWorkspace\jt-common\src\main\java\com\jt\common\service\Function.java
 D:\MyWorkspace\jt-common\src\main\java\com\jt\common\vo\Where.java
