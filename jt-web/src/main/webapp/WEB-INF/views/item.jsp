@@ -138,6 +138,9 @@
 								<a class="btn-add" href="javascript:;" onclick="setAmount.add('#buy-num')">增加数量</a>
 								<form id="cartForm" method="post">
 								<input class="text" id="buy-num" name="num" value="1" onkeyup="setAmount.modify('#buy-num');"/>
+								<input type="hidden" name="itemTitle" value="${item.title}"/>
+								<input type="hidden" name="itemImage" value="${item.images[0]}"/>
+								<input type="hidden" name="itemPrice" value="${item.price}"/>
 								</form>
 						</div>
 					</div>

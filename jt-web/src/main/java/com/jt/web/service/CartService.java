@@ -37,7 +37,7 @@ public class CartService {
 		map.put("itemId", cart.getItemId()+"");
 		map.put("itemTitle", cart.getItemTitle());
 		map.put("itemImage",cart.getItemImage());
-		map.put("itemPrice", "");
+		map.put("itemPrice", cart.getItemPrice()+"");
 		map.put("num", cart.getNum()+"");
 		httpClientService.doPost(url, map,"utf-8");
 		
