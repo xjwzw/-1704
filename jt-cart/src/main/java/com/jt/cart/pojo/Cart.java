@@ -12,9 +12,10 @@ public class Cart extends BasePojo{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private Long userId;
-	private String itemId;
-	private String itemTitle;
-	private String itemPrice;
+	private Long itemId;
+	private String itemTitle;	
+	private String itemImage;
+	private Long itemPrice;
 	private Integer num;
 	public Long getId() {
 		return id;
@@ -28,10 +29,10 @@ public class Cart extends BasePojo{
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
-	public String getItemId() {
+	public Long getItemId() {
 		return itemId;
 	}
-	public void setItemId(String itemId) {
+	public void setItemId(Long itemId) {
 		this.itemId = itemId;
 	}
 	public String getItemTitle() {
@@ -40,10 +41,11 @@ public class Cart extends BasePojo{
 	public void setItemTitle(String itemTitle) {
 		this.itemTitle = itemTitle;
 	}
-	public String getItemPrice() {
+	
+	public Long getItemPrice() {
 		return itemPrice;
 	}
-	public void setItemPrice(String itemPrice) {
+	public void setItemPrice(Long itemPrice) {
 		this.itemPrice = itemPrice;
 	}
 	public Integer getNum() {
@@ -51,6 +53,12 @@ public class Cart extends BasePojo{
 	}
 	public void setNum(Integer num) {
 		this.num = num;
+	}
+	public String getItemImage() {
+		return itemImage;
+	}
+	public void setItemImage(String itemImage) {
+		this.itemImage = itemImage;
 	}
 	
 }

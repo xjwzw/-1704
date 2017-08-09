@@ -13,20 +13,36 @@ import com.jt.cart.service.CartService;
 import com.jt.common.vo.SysResult;
 
 @Controller
+@RequestMapping("/cart")
 public class cartController {
 	@Autowired
 	private CartService cartService;
-	@RequestMapping("/cart/query/{userId}")
+	@RequestMapping("/query/{userId}")
 	@ResponseBody
 	public SysResult queryByUserId(@PathVariable Long userId){
 			List<Cart> cartList=cartService.queryByUserId(userId);
 			return SysResult.oK(cartList);
 		}
-	@RequestMapping("/cart/save")
+	//新增购物车
+	@RequestMapping("/save")
 	@ResponseBody
 	public SysResult saveCart(Cart cart){
+		System.out.println(111);
 		 cartService.saveCart(cart);
 		 return SysResult.oK();
 	}
-	
+	//更新购物车
+	@RequestMapping("/update/num/{userId}/{itemId}/{num}")
+	@ResponseBody
+	public SysResult updateCart(Cart cart){		
+		 cartService.updateCart(cart);
+		 return SysResult.oK();
+	}
+	//删除购物车商品
+	@RequestMapping("/delete/{userId}/{itemId}")
+	@ResponseBody
+	public SysResult deleteCart(Cart cart){
+		 cartService.deleteCart(cart);
+		 return SysResult.oK();
+	}
 }

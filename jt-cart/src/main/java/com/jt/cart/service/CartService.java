@@ -28,19 +28,22 @@ public class CartService extends BaseService<Cart>{
 		//判断此用户的此商品是否存在,存在直接累加数量=旧的商品数量+新的商品数量
 		//不存在，直接添加进数据库
 		Cart param=new Cart();
-		cart.setUserId(cart.getUserId());
-		cart.setItemId(cart.getItemId());
+		param.setUserId(cart.getUserId());
+		param.setItemId(cart.getItemId());
 		Cart curCart=super.queryByWhere(param);
 		if(curCart!=null){
 			curCart.setNum(curCart.getNum()+cart.getNum());
 			cartMapper.updateByPrimaryKey(curCart);
-		}
-		
+		}else{		
 		cartMapper.insertSelective(cart);
-		
+		}
 	}
-	
+	//更新商品数量
 	public void updateCart(Cart cart){
-		
+		cartMapper.updateNum(cart);
+	}
+	//删除商品
+	public void deleteCart(Cart cart){
+		cartMapper.delete(cart);
 	}
 }
