@@ -1,0 +1,5 @@
+127.0.0.1 - - [10/Aug/2017:18:11:28 +0800] "GET /cart/query/16 HTTP/1.0" 200 45 http-bio-8094-exec-1 450
+127.0.0.1 - - [10/Aug/2017:18:19:33 +0800] "POST /cart/save HTTP/1.0" 200 47 http-bio-8094-exec-1 493
+127.0.0.1 - - [10/Aug/2017:18:19:33 +0800] "GET /cart/query/16 HTTP/1.0" 200 347 http-bio-8094-exec-2 15
+127.0.0.1 - - [10/Aug/2017:18:19:54 +0800] "GET /cart/update/num/16/562379/2 HTTP/1.0" 200 47 http-bio-8094-exec-3 112
+127.0.0.1 - - [10/Aug/2017:18:19:55 +0800] "GET /cart/update/num/16/562379/3 HTTP/1.0" 200 47 http-bio-8094-exec-4 37

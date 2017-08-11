@@ -52,7 +52,7 @@ public class UserController {
 		
 		//登录	
 	@RequestMapping("/logout")
-	@ResponseBody
+	
 	public String doLogout(User user,HttpServletResponse response,HttpServletRequest request) throws Exception{
 		CookieUtils.deleteCookie(request, response, JT_TICKET);					
 		return "index";
