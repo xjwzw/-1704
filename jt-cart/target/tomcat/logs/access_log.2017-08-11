@@ -12,3 +12,5 @@
 127.0.0.1 - - [11/Aug/2017:20:30:11 +0800] "GET /cart/query/null HTTP/1.0" 400 968 http-bio-8094-exec-2 5
 127.0.0.1 - - [11/Aug/2017:20:31:33 +0800] "GET /cart/query/16 HTTP/1.0" 200 347 http-bio-8094-exec-1 443
 127.0.0.1 - - [11/Aug/2017:20:31:51 +0800] "GET /cart/query/null HTTP/1.0" 400 968 http-bio-8094-exec-2 7
+127.0.0.1 - - [11/Aug/2017:20:43:15 +0800] "GET /cart/query/16 HTTP/1.0" 200 347 http-bio-8094-exec-1 424
+127.0.0.1 - - [11/Aug/2017:20:43:16 +0800] "GET /cart/query/7 HTTP/1.0" 200 665 http-bio-8094-exec-2 10

@@ -40,4 +40,11 @@ public class orderController {
 	public Orders queryOrderById(@PathVariable String orderId){
 		return orderService.queryOrdersByOrderId(orderId);
 	}
+	
+	@RequestMapping("/changeOrderStatus")
+	@ResponseBody
+	public SysResult paymentOrderScan(){
+		orderService.paymentOrderScan();
+		return SysResult.oK();
+	}
 }

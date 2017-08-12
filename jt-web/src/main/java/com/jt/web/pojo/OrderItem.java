@@ -8,6 +8,13 @@ public class OrderItem implements Serializable{
 	private String itemId;
 	private String orderId;
 	private Integer num;
+	private String title;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	private Long price;
 	private String totalFee;
 	private String picPath;

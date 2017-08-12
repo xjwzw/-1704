@@ -4,13 +4,17 @@ import java.io.Serializable;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Table(name="tb_order_item")
 public class OrderItem implements Serializable{
+	//联合主键
 	@Id
 	private String itemId;
 	@Id
 	private String orderId;
+	
 	private Integer num;
+	private String title;	
 	private Long price;
 	private String totalFee;
 	private String picPath;
@@ -32,6 +36,12 @@ public class OrderItem implements Serializable{
 	public void setNum(Integer num) {
 		this.num = num;
 	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public Long getPrice() {
 		return price;
 	}
@@ -50,7 +60,5 @@ public class OrderItem implements Serializable{
 	public void setPicPath(String picPath) {
 		this.picPath = picPath;
 	}
-	
-	
 	
 }

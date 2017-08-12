@@ -3,18 +3,20 @@ package com.jt.order.pojo;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.jt.common.po.BasePojo;
+
 @Table(name="tb_order")
 public class Orders extends BasePojo{
-	private  OrderShipping orderShipping;
-	private  List<OrderItem> orderItems;	
+	//一个订单下有多个商品，一对多
+	private List<OrderItem> orderItems;
+	//一个订单下有一个物流信息，一对一
+	private OrderShipping orderShipping;
+	
 	@Id
-	private String orderId;
+	private String orderId;	//主键不是自增，手工设置
 	private String payment;
 	private Integer paymentType;
 	private String postFee;
@@ -23,26 +25,12 @@ public class Orders extends BasePojo{
 	private Date consignTime;
 	private Date endTime;
 	private Date closeTime;
-	private String shippingName;		
-    private String shippingCode;
+	private String shippingName;
+	private String shippingCode;
 	private Long userId;
 	private String buyerMessage;
 	private String buyerNick;
 	private Integer buyerRate;
-	
-	public OrderShipping getOrderShipping() {
-		return orderShipping;
-	}
-	public void setOrderShipping(OrderShipping orderShipping) {
-		this.orderShipping = orderShipping;
-	}
-		
-	public List<OrderItem> getOrderItems() {
-		return orderItems;
-	}
-	public void setOrderItems(List<OrderItem> orderItems) {
-		this.orderItems = orderItems;
-	}
 	public String getOrderId() {
 		return orderId;
 	}
@@ -133,7 +121,18 @@ public class Orders extends BasePojo{
 	public void setBuyerRate(Integer buyerRate) {
 		this.buyerRate = buyerRate;
 	}
-	
+	public List<OrderItem> getOrderItems() {
+		return orderItems;
+	}
+	public void setOrderItems(List<OrderItem> orderItems) {
+		this.orderItems = orderItems;
+	}
+	public OrderShipping getOrderShipping() {
+		return orderShipping;
+	}
+	public void setOrderShipping(OrderShipping orderShipping) {
+		this.orderShipping = orderShipping;
+	}
 	
 	
 }

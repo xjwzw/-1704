@@ -131,3 +131,17 @@
 127.0.0.1 - - [11/Aug/2017:20:30:11 +0800] "GET /order/create.html HTTP/1.0" 500 5564 http-bio-8092-exec-8 40
 127.0.0.1 - - [11/Aug/2017:20:31:31 +0800] "GET /index.html HTTP/1.0" 200 107045 http-bio-8092-exec-2 31
 127.0.0.1 - - [11/Aug/2017:20:31:34 +0800] "GET /cart/show.html HTTP/1.0" 200 18398 http-bio-8092-exec-3 901
+127.0.0.1 - - [11/Aug/2017:20:43:13 +0800] "GET /index.html HTTP/1.0" 200 107045 http-bio-8092-exec-2 164
+127.0.0.1 - - [11/Aug/2017:20:43:15 +0800] "GET /cart/show.html HTTP/1.0" 200 18398 http-bio-8092-exec-3 880
+127.0.0.1 - - [11/Aug/2017:20:43:16 +0800] "GET /order/create.html HTTP/1.0" 200 22805 http-bio-8092-exec-4 72
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /js/jTips.js HTTP/1.0" 200 4577 http-bio-8092-exec-10 1
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /js/jquery.checkout.js HTTP/1.0" 200 13775 http-bio-8092-exec-6 11
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /js/order.common.js HTTP/1.0" 200 9499 http-bio-8092-exec-7 12
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /js/base-2011.js HTTP/1.0" 200 29063 http-bio-8092-exec-9 23
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /js/calendar.js HTTP/1.0" 200 4240 http-bio-8092-exec-1 1
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /css/purchase.checkout.css HTTP/1.0" 200 73372 http-bio-8092-exec-5 42
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /js/order.js HTTP/1.0" 200 224122 http-bio-8092-exec-8 53
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /images/step2.png HTTP/1.0" 200 855 http-bio-8092-exec-3 1
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /images/checkout-title.gif HTTP/1.0" 200 1133 http-bio-8092-exec-4 1
+127.0.0.1 - - [11/Aug/2017:20:43:17 +0800] "GET /images/btn-submit.jpg HTTP/1.0" 200 9552 http-bio-8092-exec-2 6
+127.0.0.1 - - [11/Aug/2017:20:43:45 +0800] "POST /service/order/submit HTTP/1.0" 500 5535 http-bio-8092-exec-10 26503

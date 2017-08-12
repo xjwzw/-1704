@@ -1,6 +1,7 @@
 package com.jt.order.Service;
 
 
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,5 +23,9 @@ public class OrderService extends BaseService<Orders>{
 	//查询订单
 	public Orders queryOrdersByOrderId(String orderId) {
 		return orderMapper.queryOrdersByOrderId(orderId);
+	}
+	public void paymentOrderScan() {
+		
+	orderMapper.paymentOrderScan(new DateTime().minusDays(2).toDate());
 	}
 }

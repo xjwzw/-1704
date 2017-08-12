@@ -8,11 +8,11 @@ import javax.persistence.Table;
 import com.jt.common.po.BasePojo;
 public class OrderShipping extends BasePojo{
 	private String orderId;
-	private String recieverName;
-	private String recieverPhone ;
-	private String recieverMobile;
-	private String recieverState;
-	private String recieverCity;
+	private String receiverName;
+	private String receiverPhone;
+	private String receiverMobile;
+	private String receiverState;
+	private String receiverCity;
 	private String receiverDistrict;
 	private String receiverAddress;
 	private String receiverZip;
@@ -22,35 +22,35 @@ public class OrderShipping extends BasePojo{
 	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
-	public String getRecieverName() {
-		return recieverName;
+	public String getReceiverName() {
+		return receiverName;
 	}
-	public void setRecieverName(String recieverName) {
-		this.recieverName = recieverName;
+	public void setReceiverName(String receiverName) {
+		this.receiverName = receiverName;
 	}
-	public String getRecieverPhone() {
-		return recieverPhone;
+	public String getReceiverPhone() {
+		return receiverPhone;
 	}
-	public void setRecieverPhone(String recieverPhone) {
-		this.recieverPhone = recieverPhone;
+	public void setReceiverPhone(String receiverPhone) {
+		this.receiverPhone = receiverPhone;
 	}
-	public String getRecieverMobile() {
-		return recieverMobile;
+	public String getReceiverMobile() {
+		return receiverMobile;
 	}
-	public void setRecieverMobile(String recieverMobile) {
-		this.recieverMobile = recieverMobile;
+	public void setReceiverMobile(String receiverMobile) {
+		this.receiverMobile = receiverMobile;
 	}
-	public String getRecieverState() {
-		return recieverState;
+	public String getReceiverState() {
+		return receiverState;
 	}
-	public void setRecieverState(String recieverState) {
-		this.recieverState = recieverState;
+	public void setReceiverState(String receiverState) {
+		this.receiverState = receiverState;
 	}
-	public String getRecieverCity() {
-		return recieverCity;
+	public String getReceiverCity() {
+		return receiverCity;
 	}
-	public void setRecieverCity(String recieverCity) {
-		this.recieverCity = recieverCity;
+	public void setReceiverCity(String receiverCity) {
+		this.receiverCity = receiverCity;
 	}
 	public String getReceiverDistrict() {
 		return receiverDistrict;
