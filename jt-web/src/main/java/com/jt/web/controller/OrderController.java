@@ -22,7 +22,7 @@ public class OrderController {
 	//转向订单页面
 	@RequestMapping("create")
 	public String orderCreate(Model model) throws Exception{
-		Long userId=7L;		
+		Long userId=UserThreadLocal.getUserId();		
 		List<Cart> cartList=orderService.queryOrderByUserId(userId);
 		model.addAttribute("carts",cartList);
 		return "order-cart";
@@ -33,7 +33,7 @@ public class OrderController {
 	@RequestMapping("/submit")
 	@ResponseBody
 	public SysResult submit(Orders order) throws Exception{
-		Long userId=7L;
+		Long userId=UserThreadLocal.getUserId();
 		order.setUserId(userId);
 		String orderId=orderService.creat(order);
 		return SysResult.oK(orderId);

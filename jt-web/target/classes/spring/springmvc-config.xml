@@ -43,10 +43,17 @@
 	<mvc:default-servlet-handler />
 	<!-- 自定义拦截器 -->
       <mvc:interceptors>
+      <!-- 购物车拦截器 -->
       	<mvc:interceptor>
       		<mvc:mapping path="/cart/**"/>
       		<bean  class="com.jt.web.interceptor.CartInterceptor"></bean>
       	</mvc:interceptor>
+      	
+      <!-- 订单拦截器 -->
+      	<mvc:interceptor>
+      		<mvc:mapping path="/order/**"/>
+      		<bean  class="com.jt.web.interceptor.CartInterceptor"></bean>
+      	</mvc:interceptor>	
       </mvc:interceptors>
 	
 		
