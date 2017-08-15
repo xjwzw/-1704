@@ -3,6 +3,7 @@ package com.jt.manage.service;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,8 @@ public class ItemService extends BaseService<Item>{
 	private RedisService redisService;
 	@PropertyConfig
 	private String ITEM_KEY_PEFIX;
+	@Autowired
+	private RabbitTemplate rabbitTemplate;
 	/**
 	 * {"title":2000,"rows":[{},{},{}]}
 		title 是记录总数
@@ -107,7 +110,11 @@ public class ItemService extends BaseService<Item>{
 		itemDesc.setItemDesc(desc);
 		itemDesc.setUpdated(item.getUpdated());
 		itemDescMapper.updateByPrimaryKeySelective(itemDesc);
-		redisService.del(ITEM_KEY_PEFIX+item.getId());//删除缓存
+		//发送消息到mq中,消息的接受者去更新缓存
+		String routingKey="item.update";
+		//redisService.del(ITEM_KEY_PEFIX+item.getId());//删除缓存
+		rabbitTemplate.convertAndSend(routingKey,ITEM_KEY_PEFIX+item.getId());
+		
 	}
 	/**
 	 * 删除商品
