@@ -6,17 +6,28 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.solr.client.solrj.beans.Field;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jt.common.po.BasePojo;
 
 //商品信息
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Item extends BasePojo{	
+	@Field
 	private Long id;//商品id
+	@Field
 	private String title;//商品标题
 	//@Column(name="sell_point")
+	@Field
 	private String sellPoint;//卖点
+	@Field
 	private Long price;//价格 后期由js计算/100
+	@Field
 	private Integer num;//数量
+	@Field
 	private String barcode;//扫描码
+	@Field
 	private String image;//商品图片
 	private Long cid;//分类号
 	private Integer status;//状态 默认值为1，可选值：1正常，2下架，3删除

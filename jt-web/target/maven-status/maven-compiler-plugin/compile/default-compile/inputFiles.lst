@@ -12,7 +12,9 @@ D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\service\RabbitItemService.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\pojo\Orders.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\service\UserService.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\pojo\OrderShipping.java
+D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\controller\SearchController.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\controller\CartController.java
+D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\service\SearchService.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\controller\IndexController.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\Treadlocal\UserThreadLocal.java
 D:\.git\jt-1704\jt-web\src\main\java\com\jt\web\service\ItemService.java
